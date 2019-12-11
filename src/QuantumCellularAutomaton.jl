@@ -10,8 +10,10 @@ function c_next(c, delta)
 end
 
 
-function normalization_factor(c)
-
+function calc_norm_factor(c)
+    N = 0
+    for j in eachindex(c)
+        N += conj(c) * c
+    end
+    return N
 end
-
-
