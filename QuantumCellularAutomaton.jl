@@ -1,3 +1,7 @@
+using Plots
+using Random
+
+
 function c_next(c, delta)
     c_new = deepcopy(c)
     for j in eachindex(c)
@@ -15,3 +19,6 @@ function normalization_factor(c)
 end
 
 
+anim = @animate for i=1:100
+    plot()
+end
